@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="JavaScript">
+        function WinOpen_Bondar1(){
+            window.open("obraz1.html","okienko1","toolbar=no,directories=no,menubar=no,height=380,width=180,top=360,left=0");
+        }
+        function WinOpen_Bondar2(){
+            window.open("obraz2.html","okienko2","toolbar=no,directories=no,menubar=no,height=380,width=180,top=360,left=210");
+        }
+        function WinOpen_Bondar3(){
+            window.open("obraz3.html","okienko3","toolbar=no,directories=no,menubar=no,height=380,width=180,top=360,left=420");
+        }
+        function WinOpen_Bondar4(){
+            window.open("obraz4.html","okienko4","toolbar=no,directories=no,menubar=no,height=380,width=180,top=360,left=630");
+        }
+
+        function WinOpen_Bondar5(){
+            WinOpen_Bondar1();
+            WinOpen_Bondar2();
+            WinOpen_Bondar3();
+            WinOpen_Bondar4();
+        }
+
+        function WinClose(){
+            window.close();
+        }
+
+    </script>
+</head>
+<body>
+    <p style="text-align: center; color: red; font-size: large;">
+        <b>wykonał: Stanislaw Bondar 1P mój numer w dzienniku 4, czyli mam uklad [(4) mod 4=0] uklad 4</b><br>
+    </p>
+    
+    <center>
+        <input type="button" name="obraz1" value="grafika1" onclick="WinOpen_Bondar1(' ')">
+        <input type="button" name="obraz2" value="grafika2" onclick="WinOpen_Bondar2(' ')">
+        <input type="button" name="obraz3" value="grafika3" onclick="WinOpen_Bondar3(' ')">
+        <input type="button" name="obraz4" value="grafika4" onclick="WinOpen_Bondar4(' ')"><BR><BR><BR><Br><BR><BR>
+        <input type="button" name="obraz1-4" value="grafika1-4" onclick="WinOpen_Bondar5()">
+        <input type="button" name="zamknij" value="zamknij okno" onclick="WinClose(' ')">
+    </center>
+
+</body>
+</html>

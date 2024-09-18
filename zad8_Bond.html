@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript"> 
+        function show_confirm() 
+        { 
+        var r=confirm("Naciśnij klawisz"); 
+        if (r==true) 
+        { document.write("Nacisnąłeś OK!"); } 
+        else 
+        { document.write("Nacisnąłeś Cancel!"); } 
+        } 
+       18
+       </script>
+</head>
+<body>
+    <p>
+        <b>Zastosowanie:</b><br>
+        Jest używany kiedy użytkownik ma wpisać coś np. zanim wejdzie w dany moduł strony. Np. hasło. 
+        Użytkownik po wpisaniu wartość może nacisnął „OK.” albo „Cancel” Jeżeli użytkownik kliknie „OK.” 
+        metoda zwraca wpisaną wartość, a w przeciwnym wypadku zwraca null.<br>
+    </p>
+
+    <input type="button" onclick="show_confirm()" value="Pokaż confirm box" /> 
+</body>
+</html>
