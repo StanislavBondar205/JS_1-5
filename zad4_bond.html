@@ -2,6 +2,14 @@
     <head>
         <title> Bondar 1P</title>
         <script language="JavaScript">
+             function WinOpen_z1() 
+            {
+                window.open("zad1_Bond.html","okienko_z1","toolbar=no,directories=no,menubar=no,height=380,width=1000,top=200,left=200");
+            }
+            function WinOpen_z2() 
+            {
+                window.open("zad2_Bond.html","okienko_z2","toolbar=no,directories=no,menubar=no,height=380,width=1000,top=200,left=200");
+            }
             function WinOpen_z3() 
             {
                 window.open("zad3_Bond.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
@@ -21,10 +29,12 @@
         </script>
     </head>
     <body>
-        <p style="color: red;">
+        <p style="color: red; font-size: x-large;">
            <b> Szkielet zaliczeniowy JavaScript Bondar Stanislaw 2P</b> <br>
         </p>
         <form>
+            <input type="button_z1" name="zadanie1" value="zadanie1-Bondar" onclick="WinOpen_z1(' ')">
+            <input type="button_z2" name="zadanie2" value="zadanie2-Bondar" onclick="WinOpen_z2(' ')">
             <input type="button_z3" name="zadanie3" value="zadanie3-Bondar" onclick="WinOpen_z3(' ')">
             <input type="button_z4" name="zadanie4" value="zadanie4-Bondar" onclick="WinOpen_z4(' ')">
             <input type="button_z5" name="zadanie5" value="zadanie5-Bondar" onclick="WinOpen_z5(' ')">
