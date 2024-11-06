@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="JavaScript">
+
+        // A(xa_bon,ya_bon) B(xb_bon,yb_bon) C(xc_bon,yc_bon)
+
+        function AB_bon(){
+            var xa_bon = parseFloat(document.getElementById('xa_bon').value);
+            var ya_bon = parseFloat(document.getElementById('ya_bon').value);
+            var xb_bon = parseFloat(document.getElementById('xb_bon').value);
+            var yb_bon  = parseFloat(document.getElementById('yb_bon').value);
+            var xc_bon = parseFloat(document.getElementById('xc_bon').value);
+            var yc_bon = parseFloat(document.getElementById('yc_bon').value); 
+
+            document.getElementById("nazwa").innerHTML =  Math.sqrt(((xa_bon - xb_bon)**2) + ((ya_bon - yb_bon)**2));
+        }
+
+        function BC_bon(){
+            var xa_bon = parseFloat(document.getElementById('xa_bon').value);
+            var ya_bon = parseFloat(document.getElementById('ya_bon').value);
+            var xb_bon = parseFloat(document.getElementById('xb_bon').value);
+            var yb_bon  = parseFloat(document.getElementById('yb_bon').value);
+            var xc_bon = parseFloat(document.getElementById('xc_bon').value);
+            var yc_bon = parseFloat(document.getElementById('yc_bon').value); 
+
+            document.getElementById("nazwa").innerHTML =  Math.sqrt(((xb_bon - xc_bon)**2) + ((yb_bon - yc_bon)**2));
+        }
+
+        function AC_bon(){
+            var xa_bon = parseFloat(document.getElementById('xa_bon').value);
+            var ya_bon = parseFloat(document.getElementById('ya_bon').value);
+            var xb_bon = parseFloat(document.getElementById('xb_bon').value);
+            var yb_bon  = parseFloat(document.getElementById('yb_bon').value);
+            var xc_bon = parseFloat(document.getElementById('xc_bon').value);
+            var yc_bon = parseFloat(document.getElementById('yc_bon').value); 
+
+            document.getElementById("nazwa").innerHTML = Math.sqrt(((xa_bon - xc_bon)**2) + ((ya_bon - yc_bon)**2));
+        }
+
+    </script>
+</head>
+<body>
+    
+    A(xa_bon,ya_bon) <input type="text" id="xa_bon" value="xa_bon"> 
+
+ <input type="text" id="ya_bon" value="ya_bon"> <br><br><br> 
+
+ B(xb_bon,yb_bon) <input type="text" id="xb_bon" value="xb_bon"> 
+
+ <input type="text" id="yb_bon" value="yb_bon"> <br><br><br> 
+
+ C(xc_bon,yc_bon)    <input type="text" id="xc_bon" value="xc_bon"> 
+
+ <input type="text" id="yc_bon" value="yc_bon"> <br><br><br> 
+
+    <input type="button" name="AB" value="Oblicz AB" Onclick="AB_bon()"><br><br>
+    <input type="button" name="BC" value="Oblicz BC" Onclick="BC_bon()"><br><br>
+    <input type="button" name="AC" value="Oblicz AC" Onclick="AC_bon()"><br><br>
+
+    <div  style="color:red;font-size:50px;"id="nazwa"></div> 
+</body>
+</html>

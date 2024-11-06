@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function odejmowanie_bon(a,b){
+            return a-b;
+        }
+        function suma_bon(a,b){
+            return a+b;
+        }
+        function mnozenie_bon(a,b){
+            return a*b;
+        }
+        function do_kwadratu_bon1(a,b){
+            return a ** b;
+        }  
+        function do_kwadratu_bon2(a,b){
+            return b ** a;
+        }
+        function reszta_z_dzielenia_a_przez_b_bon(){
+            return a%b;
+        }
+
+        var a=parseFloat(prompt("a=",""));
+        var b=parseFloat(prompt("b=",""));
+
+        document.write('suma = ' + suma_bon(a,b) + '<br>')
+        document.write('odejmowanie = ' + odejmowanie_bon(a,b)+ '<br>')
+        document.write('mnozenie = ' + mnozenie_bon(a,b)+ '<br>')
+        document.write('do_kwadratu_pierwzy_parametr = ' + do_kwadratu_bon1(a,b)+ '<br>')
+        document.write('do_kwadratu_drugi_parametr = ' + do_kwadratu_bon2(a,b)+ '<br>')
+        document.write('reszta_z_dzielenia_a_przez_b_bon = ' + reszta_z_dzielenia_a_przez_b_bon(a,b)+ '<br>')
+    </script>
+</body>
+</html>

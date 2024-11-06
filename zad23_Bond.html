@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script lang="JavaScript">
+        function find_angle(){
+            var x= parseFloat(document.getElementById('x').value); 
+            var d= parseFloat(document.getElementById('D').value);
+            let alfa = Math.atan((d/x)) * 180 / Math.PI;
+            document.getElementById("kut").value = Math.atan((d/x)) * 180 / Math.PI;
+        }
+
+        function find_CB(){
+            var x= parseFloat(document.getElementById('x').value); 
+            var d= parseFloat(document.getElementById('D').value);
+
+            document.getElementById("drabina").value = Math.sqrt(x**2 + d**2);
+        }
+    </script>
+</head>
+
+<body>
+    Podaj x=<input type="text" id="x" value=""> 
+    Podaj D=<input type="text" id="D" value=""> <br><br>
+    
+    <input type="button" name="wypisz" value="Oblicz" Onclick="find_angle(),find_CB()"><br><br> 
+
+    Drabina=<input type="text" id="drabina" value=""> 
+    Alfa=<input type="text" id="kut" value=""> <br><br> 
+
+    
+</body>
+</html>
