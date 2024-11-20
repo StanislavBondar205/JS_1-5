@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var pudelko = {
+            nazwa: 'pudelko',
+            szerokosc: 20,
+            dlugosc: 50,
+            Pudelko_wyswietl_Bondar: function (){
+             document.write("Pudelko <BR>"+this.nazwa+"<BR>"+this.szerokosc + 'x' + this.dlugosc)
+            }
+        }
+        pudelko.weight_kg = 0.5;
+        pudelko.pudelko_pokaz_Bondar = function(){
+            document.write("nazwa obiektu: " + this.nazwa + "<br>szerokosc: " + this.szerokosc + "<br>dlugosc: " + this.dlugosc + "<br>Pudelko_wyswietl_Bondar()" + this)
+        }
+        pudelko.pudelko_pokaz_Bondar();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
