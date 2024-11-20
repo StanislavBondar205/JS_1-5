@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radioactive Decay Calculator</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div class="result" id="output"></div>
+
+    <script>
+        
+        const N0 = parseFloat(prompt("Podaj ilosc atomow(N₀):", "1"));
+        const t = parseFloat(prompt("Podaj czas (t) [years]:", "1"));
+        const T12 = parseFloat(prompt("Podaj okres polowicznego zaniku (T½) [years]:", "5700"));
+
+
+        const lambda = Math.LN2 / T12;
+        const lambdaFormatted = lambda.toFixed(7);
+
+
+        const N = N0 * Math.pow(Math.E, -lambda * t);
+        const NFormatted = N.toFixed(6);
+
+      
+        document.getElementById("output").innerHTML = `
+            <p>N0=${N0}[sztuk]</p>
+            <p>t=${t}[lat]</p>
+            <p>T1/2=${T12}[1/rok]</p>
+            <p>Lambda${lambdaFormatted} [1/year]</p>
+            <p>N=${NFormatted} [atoms]</p>
+        `.fontcolor("darkblue").fontsize("7");
+    
+</script>
+</body>
+</html>

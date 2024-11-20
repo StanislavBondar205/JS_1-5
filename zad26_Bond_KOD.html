@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="300" rows="100">
+
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazwisko_ucznia-Zadanie26</title>
+    <script>
+        function Pow_kowalski(base1, base2, height) {
+            return ((base1 + base2) * height) / 2;
+        }
+
+        function Obw_kowalski(base1, base2, height) {
+            const longerBase = Math.max(base1, base2); // Dłuższa podstawa
+            const shorterBase = Math.min(base1, base2); // Krótsza podstawa
+            const leg = Math.sqrt(Math.pow((longerBase - shorterBase) / 2, 2) + Math.pow(height, 2)); // Twierdzenie Pitagorasa
+            return base1 + base2 + 2 * leg; // Suma dwóch podstaw i dwóch ramion
+        }
+
+        function zadanie26() {
+            const base1 = Math.abs(parseFloat(document.getElementById("base1").value)); // Podstawa górna
+            const base2 = Math.abs(parseFloat(document.getElementById("base2").value)); // Podstawa dolna
+            const height = Math.abs(parseFloat(document.getElementById("height").value)); // Wysokość
+
+            const pole = Pow_kowalski(base1, base2, height);
+            const obwod = Obw_kowalski(base1, base2, height);
+
+            document.write(`<p>Pole trapezu: <strong>${pole.toFixed(2)}</strong></p>`);
+            document.write(`<p>Obwód trapezu: <strong>${obwod.toFixed(2)}</strong></p>`);
+            document.write("<button onclick='location.reload()'>Powrót</button>");
+        }
+    </script>
+</head>
+<body>
+    <h1>Obliczenie pola i obwodu trapezu równoramiennego</h1>
+    <form>
+        <label for="base1">Podaj długość górnej podstawy (a):</label><br>
+        <input type="number" id="base1" name="base1" step="0.01" required><br><br>
+        
+        <label for="base2">Podaj długość dolnej podstawy (b):</label><br>
+        <input type="number" id="base2" name="base2" step="0.01" required><br><br>
+        
+        <label for="height">Podaj wysokość trapezu (h):</label><br>
+        <input type="number" id="height" name="height" step="0.01" required><br><br>
+        
+        <button type="button" onclick="zadanie26()">Oblicz</button>
+    </form>
+</body>
+</html>
+
+
+    </textarea>
+</body>
+</html>

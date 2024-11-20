@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="300" rows="100">
+
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script lang="JavaScript">
+        function to_rad(degrees){
+            return (degrees*Math.PI)/180
+        }
+
+        var x1 = prompt("x1=","")
+        var x2 = prompt("x2=","")
+
+        var y1 = 3 * to_rad(x1)**(4/6)
+        var y2 = 2 * Math.cos(to_rad(x1)) + 3 * Math.sin(to_rad(x1))
+        var y3 = Math.sqrt(Math.sqrt(to_rad(x1)**5 + 2 * x2**4)) * to_rad(x1) - to_rad(x2)
+
+
+        document.write("x1=" + x1 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x2=" + x2 + "<br>")
+        document.write("x1=" + x1 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x1=" + to_rad(x1).toFixed(2) + "<br>")
+        document.write("y1=" + y1.toFixed(2) + "<BR>")
+        document.write("y2=" + y2.toFixed(2) + "<BR>")
+        document.write("y3=" + y3.toFixed(2) + "<BR>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+    </textarea>
+</body>
+</html>
