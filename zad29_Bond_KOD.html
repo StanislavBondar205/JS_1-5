@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="300" rows="100">
+        # Preparing the HTML content for the answers.
+html_content = """
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odpowiedzi na pytania teoretyczne</title>
+</head>
+<body>
+    <h1>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</h1>
+    <p>Sposób 1: Korzystanie z notacji kropkowej.</p>
+    <pre><code>
+auto.marka = "Opel Omega";
+auto.rok = 1996;
+    </code></pre>
+    <p>Sposób 2: Korzystanie z notacji nawiasów kwadratowych.</p>
+    <pre><code>
+auto["marka"] = "Opel Omega";
+auto["rok"] = 1996;
+    </code></pre>
+
+    <h1>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</h1>
+    <p>Odwołujemy się do pól i metod, poprzedzając ich nazwę nazwą obiektu oraz kropką.</p>
+    <pre><code>
+console.log(samochod1.kolor); // Wyświetla kolor obiektu samochod1
+    </code></pre>
+
+    <h1>3. Wymień cechy charakterystyczne konstruktora.</h1>
+    <ul>
+        <li>Wywoływany automatycznie podczas tworzenia obiektu.</li>
+        <li>Nazywa się tak samo jak klasa.</li>
+        <li>Nie zwraca żadnej wartości.</li>
+        <li>Może przyjmować argumenty, aby inicjalizować obiekt.</li>
+    </ul>
+
+    <h1>4. Konstruowanie obiektu na podstawie przykładu</h1>
+    <p>Obiekt z trzema polami i jedną metodą:</p>
+    <pre><code>
+var osoba_1 = {
+    nazwisko: "Kowalski",
+    imie: "Jan",
+    zawod: "piekarz",
+    wyswietl: function () {
+        document.write(this.nazwisko + " " + this.imie);
+    }
+};
+    </code></pre>
+
+    <h1>5. Znaczenie słowa <code>this</code>. Jak oddzielamy pola oraz metody?</h1>
+    <p>Słowo kluczowe <code>this</code> odnosi się do bieżącego obiektu, umożliwiając dostęp do jego pól i metod.</p>
+    <p>Pola i metody w obiekcie oddzielamy przecinkami.</p>
+    <pre><code>
+var osoba = {
+    nazwisko: "Nowak",
+    wyswietl: function () {
+        console.log(this.nazwisko);
+    }
+};
+    </code></pre>
+
+    <h1>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h1>
+    <p>Przykład:</p>
+    <pre><code>
+function Klient(nazwisko, imie, zawod) {
+    this.nazwisko = nazwisko;
+    this.imie = imie;
+    this.zawod = zawod;
+    this.wypisz = function () {
+        alert(this.nazwisko + " " + this.imie);
+    };
+}
+    </code></pre>
+    <p>Opis: Konstruktor definiuje szkielet obiektu, przypisując parametry do pól za pomocą <code>this</code>. Służy do tworzenia nowych obiektów.</p>
+
+    <h1>7. Znaczenie słowa kluczowego <code>new</code> wraz z przykładem.</h1>
+    <p><code>new</code> tworzy nowy obiekt na podstawie konstruktora, przypisując wartości do jego pól.</p>
+    <pre><code>
+var osoba1 = new Klient("Kowalski", "Jan", "kierowca");
+    </code></pre>
+
+    <h1>8. Znaczenie słowa kluczowego <code>prototype</code> wraz z przykładem i opisem.</h1>
+    <p>Właściwość <code>prototype</code> pozwala dodawać nowe metody lub właściwości do istniejących obiektów.</p>
+    <pre><code>
+function Klient() {
+    this.nazwisko = "Bielski";
+    this.imie = "Paweł";
+}
+Klient.prototype.pisz_dane = function () {
+    document.write(this.nazwisko + " " + this.imie);
+};
+Klient.prototype.zawod = "kierowca";
+var osoba1 = new Klient();
+osoba1.pisz_dane(); // Wyświetli: Bielski Paweł
+    </code></pre>
+</body>
+</html>
+
+    </textarea>
+</body>
+</html>

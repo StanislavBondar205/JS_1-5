@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zadanie 31 - Pudełko</title>
     <script type="text/javascript">
+
         var pudelko = {
             nazwa: 'pudelko',
             szerokosc: 20,
             dlugosc: 50,
-            Pudelko_wyswietl_Bondar: function (){
-             document.write("Pudelko <BR>"+this.nazwa+"<BR>"+this.szerokosc + 'x' + this.dlugosc)
+            Pudelko_wyswietl_Bondar: function () {
+                document.write("<strong>Obiekt:</strong> " + this.nazwa + "<br>");
+                document.write("<strong>Wymiary:</strong> " + this.szerokosc + " x " + this.dlugosc + "<br>");
             }
-        }
+        };
+
         pudelko.weight_kg = 0.5;
-        pudelko.pudelko_pokaz_Bondar = function(){
-            document.write("nazwa obiektu: " + this.nazwa + "<br>szerokosc: " + this.szerokosc + "<br>dlugosc: " + this.dlugosc + "<br>Pudelko_wyswietl_Bondar()" + this)
-        }
+
+        pudelko.pudelko_pokaz_Bondar = function () {
+            document.write("<br><strong>Informacje o obiekcie:</strong><br>");
+            document.write("Nazwa obiektu: " + this.nazwa + "<br>");
+            document.write("Szerokość: " + this.szerokosc + "<br>");
+            document.write("Długość: " + this.dlugosc + "<br>");
+            document.write("Waga: " + this.weight_kg + " kg<br>");
+            document.write("Metoda: pudelko_pokaz_Bondar<br>");
+        };
+
+        pudelko.Pudelko_wyswietl_Bondar();
         pudelko.pudelko_pokaz_Bondar();
     </script>
 </head>
 <body>
-    
+    <h1>Programowanie obiektowe - Pudełko</h1>
+    <p>Obiekt: Pudełko</p>
+    <p>Wymiary, pola i metody są wyświetlane poniżej w konsoli i na stronie.</p>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="300" rows="100">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programowanie Obiektowe</title>
+    <script type="text/javascript">
+        // Konstruktor klasy
+        function Uczen(nazwisko, imie, klasa, ocena) {
+            this.nazwisko = nazwisko;
+            this.imie = imie;
+            this.klasa = klasa;
+            this.ocena = ocena;
+        }
+
+        Uczen.prototype.wypiszDane = function () {
+            return `Uczeń: ${this.nazwisko} ${this.imie}, Klasa: ${this.klasa}, Ocena: ${this.ocena}`;
+        };
+
+        Uczen.prototype.szkolnaGrupa = "Grupa A";
+
+        Uczen.prototype.pokazNazwisko = function () {
+            return `Nazwisko: ${this.nazwisko}`;
+        };
+
+        const uczen1 = new Uczen("Kowalski", "Jan", "3A", 4.5);
+        const uczen2 = new Uczen("Nowak", "Anna", "2B", 5.0);
+        const uczen3 = new Uczen("Wiśniewski", "Marek", "1C", 3.8);
+
+        function pokazDane() {
+            const dane = `
+                ${uczen1.wypiszDane()}<br>
+                ${uczen2.wypiszDane()}<br>
+                ${uczen3.wypiszDane()}<br>
+                Grupa (uczen1): ${uczen1.szkolnaGrupa}<br>
+                Dodatkowa metoda (uczen1): ${uczen1.pokazNazwisko()}
+            `;
+            document.getElementById("wynik").innerHTML = dane;
+        }
+
+        
+    </script>
+</head>
+<body>
+    <h1>Programowanie Obiektowe</h1>
+    <button onclick="pokazDane()">Pokaż Zadanie</button>
+    <div id="wynik" style="margin-top: 20px; font-weight: bold;"></div>
+</body>
+</html>
+
+    </textarea>
+</body>
+</html>
