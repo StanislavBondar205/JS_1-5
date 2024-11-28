@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programowanie Obiektowe</title>
     <script type="text/javascript">
-        // Konstruktor klasy
         function Uczen(nazwisko, imie, klasa, ocena) {
             this.nazwisko = nazwisko;
             this.imie = imie;
@@ -19,7 +18,7 @@
 
         Uczen.prototype.szkolnaGrupa = "Grupa A";
 
-        Uczen.prototype.pokazNazwisko = function () {
+        Uczen.prototype.pokazBondar = function () {
             return `Nazwisko: ${this.nazwisko}`;
         };
 
@@ -33,7 +32,7 @@
                 ${uczen2.wypiszDane()}<br>
                 ${uczen3.wypiszDane()}<br>
                 Grupa (uczen1): ${uczen1.szkolnaGrupa}<br>
-                Dodatkowa metoda (uczen1): ${uczen1.pokazNazwisko()}
+                Dodatkowa metoda (uczen1): ${uczen1.pokazBondar()}
             `;
             document.getElementById("wynik").innerHTML = dane;
         }
