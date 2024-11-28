@@ -28,7 +28,7 @@
 
         Uczen.prototype.szkolnaGrupa = "Grupa A";
 
-        Uczen.prototype.pokazNazwisko = function () {
+        Uczen.prototype.pokazBondar = function () {
             return `Nazwisko: ${this.nazwisko}`;
         };
 
@@ -42,7 +42,7 @@
                 ${uczen2.wypiszDane()}<br>
                 ${uczen3.wypiszDane()}<br>
                 Grupa (uczen1): ${uczen1.szkolnaGrupa}<br>
-                Dodatkowa metoda (uczen1): ${uczen1.pokazNazwisko()}
+                Dodatkowa metoda (uczen1): ${uczen1.pokazBondar()}
             `;
             document.getElementById("wynik").innerHTML = dane;
         }
